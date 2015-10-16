@@ -5,12 +5,14 @@
 # run with box_name=win7-ie11 vagrant up
 #     os: xp/vista/win7/win8/win81/win10
 #     ie: ie6 (xp only), ie7 (vista only), ie8 (xp/win7), ie9 (win7),
-#     ie10 (win7/win8), ie11 (win81/win10), msedge (win10)
+#     ie10 (win7/win8), ie11 (win7/win81), msedge (win10)
 
 # box name into env var, same script can be used with different boxes. Defaults to win7-ie11.
-box_name = box_name = ENV['box_name'] != nil ? ENV['box_name'].strip : 'win7-ie11'
+box_name = ENV['box_name'] != nil ? ENV['box_name'].strip : 'win7-ie11'
 # box repo into env var, so private repos/cache can be used. Defaults to http://aka.ms
 box_repo = ENV['box_repo'] != nil ? ENV['box_repo'].strip : 'http://aka.ms'
+
+puts "\n\nbox_name: #{box_name}\n\n"
 
 Vagrant.configure("2") do |config|
   # If the box is win7-ie11, the convention for the box name is modern.ie/win7-ie11
