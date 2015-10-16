@@ -1,6 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 # from https://gist.github.com/andreptb/57e388df5e881937e62a
+#
+# run with box_name=win7-ie11 vagrant up
+#     os: xp/vista/win7/win8/win81/win10
+#     ie: ie6 (xp only), ie7 (vista only), ie8 (xp/win7), ie9 (win7),
+#     ie10 (win7/win8), ie11 (win81/win10), msedge (win10)
 
 # box name into env var, same script can be used with different boxes. Defaults to win7-ie11.
 box_name = box_name = ENV['box_name'] != nil ? ENV['box_name'].strip : 'win7-ie11'
